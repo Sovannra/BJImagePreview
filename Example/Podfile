@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'BJImagePreview_Example' do
+  pod 'BJImagePreview', :path => '../'
+
+  target 'BJImagePreview_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
