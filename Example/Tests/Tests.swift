@@ -1,5 +1,4 @@
 import XCTest
-import BJImagePreview
 
 class Tests: XCTestCase {
     

@@ -1,0 +1,29 @@
+{
+  "name": "BJImagePreview",
+  "version": "0.1.0",
+  "summary": "A short description of BJImagePreview.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Sovannra/BJImagePreview",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Sovannra": "sovannrakong@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Sovannra/BJImagePreview.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "swift_versions": "4.2",
+  "source_files": "BJImagePreview/Classes/**/*",
+  "dependencies": {
+    "Nuke": [
+
+    ]
+  },
+  "swift_version": "4.2"
+}

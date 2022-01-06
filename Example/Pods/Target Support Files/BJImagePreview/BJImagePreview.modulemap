@@ -1,0 +1,6 @@
+framework module BJImagePreview {
+  umbrella header "BJImagePreview-umbrella.h"
+
+  export *
+  module * { export * }
+}

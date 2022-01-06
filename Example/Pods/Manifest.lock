@@ -1,0 +1,28 @@
+PODS:
+  - BJCollection (0.3.0)
+  - BJImagePreview (0.1.0):
+    - Nuke
+  - Nuke (7.5.2)
+
+DEPENDENCIES:
+  - BJCollection
+  - BJImagePreview (from `../`)
+  - Nuke
+
+SPEC REPOS:
+  trunk:
+    - BJCollection
+    - Nuke
+
+EXTERNAL SOURCES:
+  BJImagePreview:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BJCollection: b39c50b7503b4c4b6bbf0dd04ecf2e533ee9d460
+  BJImagePreview: e00f3ab3851f83307a3786b5c323370157a2a6d4
+  Nuke: 0350d346a688426e8f2331253ef28dc2fc4f6178
+
+PODFILE CHECKSUM: 90d619c28043363ca814db159298fb2c93fd7f32
+
+COCOAPODS: 1.11.2

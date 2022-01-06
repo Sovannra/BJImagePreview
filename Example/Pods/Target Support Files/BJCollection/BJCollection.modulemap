@@ -1,0 +1,6 @@
+framework module BJCollection {
+  umbrella header "BJCollection-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -4,10 +4,10 @@ platform :ios, '9.0'
 
 target 'BJImagePreview_Example' do
   pod 'BJImagePreview', :path => '../'
+  pod 'BJCollection'
+  pod 'Nuke'
 
   target 'BJImagePreview_Tests' do
     inherit! :search_paths
-
-    
   end
 end
