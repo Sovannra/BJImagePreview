@@ -9,6 +9,8 @@ import UIKit
 
 class TopViewMask: UIView {
     
+    fileprivate var vtopViewConstraint: NSLayoutConstraint?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .init(white: 0.5, alpha: 0.2)
@@ -20,6 +22,11 @@ class TopViewMask: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        vtopViewConstraint?.constant = ImageAppConstant.statusBarHeight
+    }
+    
     private func setupComponent() {
         addSubview(vtopView)
         vtopView.addSubview(vPotoCount)
@@ -27,7 +34,8 @@ class TopViewMask: UIView {
     
     private func setupConstraint() {
         //vTopView
-        vtopView.topAnchor.constraint(equalTo: self.topAnchor, constant: ImageAppConstant.statusBarHeight).isActive = true
+        vtopViewConstraint = vtopView.topAnchor.constraint(equalTo: self.topAnchor, constant: ImageAppConstant.statusBarHeight)
+        vtopViewConstraint?.isActive = true
         vtopView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         vtopView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         vtopView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true

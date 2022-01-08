@@ -50,8 +50,28 @@ class ImageViewerPagerVC: UIPageViewController{
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        updateLayout()
+    }
+    
+    private func updateLayout() {
+        self.view.frame = UIScreen.main.bounds
+    }
 }
+
+extension ImageViewerPagerVC: mediaPhotosPageViewDelegate {
+    func viewWillBeginZooming() {
+        
+    }
+    
+    func viewDidEndZooming() {
+        
+    }
+    
+}
+
 extension ImageViewerPagerVC: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -126,6 +146,8 @@ class ImageViwerVC: UIViewController {
         return imageView
     }()
     
+    var delegate: mediaPhotosPageViewDelegate?
+    
     fileprivate var displacementSpringBounce: CGFloat = 0.7
     fileprivate var displacementDuration: TimeInterval = 0.55
     
@@ -157,10 +179,10 @@ class ImageViwerVC: UIViewController {
 
 extension ImageViwerVC: mediaPhotosPageViewDelegate {
     func viewWillBeginZooming() {
-        print("Begin Zoom")
+  
     }
     
     func viewDidEndZooming() {
-        print("End Zoom")
+      
     }
 }

@@ -57,15 +57,15 @@ class MediaPhotosPageView: UIScrollView, UIScrollViewDelegate {
         showsVerticalScrollIndicator = false
         
         
-        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(singleTapped))
-        singleTapGesture.numberOfTapsRequired = 1
-        addGestureRecognizer(singleTapGesture)
+//        let singleTapGesture = UITapGestureRecognizer(target: self, action: nil)
+//        singleTapGesture.numberOfTapsRequired = 1
+//        addGestureRecognizer(singleTapGesture)
         
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(doubleTapped(_:)))
         doubleTapGesture.numberOfTapsRequired = 2
         addGestureRecognizer(doubleTapGesture)
         
-        singleTapGesture.require(toFail: doubleTapGesture)
+//        singleTapGesture.require(toFail: doubleTapGesture)
     }
     func configureImageView() {
         guard let image = imageView.image else {

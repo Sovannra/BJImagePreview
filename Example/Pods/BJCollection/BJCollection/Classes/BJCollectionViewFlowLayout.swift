@@ -7,14 +7,14 @@
 
 import UIKit
 
-class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
+public class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     /** set the item count in row */
-    var numberOfItemsInRow: Int = 3
+    public var numberOfItemsInRow: Int = 3
     /** set spacing between items */
     var spacingBetweenItems: CGFloat = 2.0
     /** set items height */
-    var heightItems: CGFloat = 0
+    public var heightItems: CGFloat = 0
     /** set items width */
     var widthItems: CGFloat = 0
     /** set header height */
@@ -24,7 +24,7 @@ class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
     /** to have sticky header. default is not */
     var stickyHeader: Bool = false
     
-    override func prepare() {
+    public override func prepare() {
         super.prepare()
         updateLayout()
         updateHeaderLayout()
@@ -62,7 +62,7 @@ class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
         }
     }
     
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    public override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let layoutAttributes = super.layoutAttributesForElements(in: rect)
         if stickyHeader {
             layoutAttributes?.forEach({ (attribute) in
@@ -87,7 +87,7 @@ class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
         return layoutAttributes
     }
     
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    public override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
 }

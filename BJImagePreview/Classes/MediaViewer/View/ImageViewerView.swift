@@ -58,9 +58,12 @@ open class ImageViewerView: UIView {
             updateUI(state: .began)
         }
         // Update photo count
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showHideTopView))
-//        self.addGestureRecognizer(tapGesture)
         vTopView.setupPhotoCount(count: currentIndex, total: photos.count)
+    }
+    
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        self.frame = UIScreen.main.bounds
     }
     
     //MARK: - local func
@@ -92,8 +95,18 @@ open class ImageViewerView: UIView {
         vTopView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         vTopView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         vTopView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        
+        // Hanlde show / hide top bar
+        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(showHideTopView(_:)))
+        singleTapGesture.numberOfTouchesRequired = 1
+        addGestureRecognizer(singleTapGesture)
+        
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(showHideTopView(_:)))
+        doubleTapGesture.numberOfTapsRequired = 2
+        addGestureRecognizer(doubleTapGesture)
+        singleTapGesture.require(toFail: doubleTapGesture)
     }
-    
+        
     //MARK:- action
     func show() {
         UIApplication.shared.keyWindow?.addSubview(self)
@@ -123,8 +136,8 @@ open class ImageViewerView: UIView {
         }
     }
     
-    @objc private func showHideTopView() {
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn) { [self] in
+    @objc private func showHideTopView(_ tap: UITapGestureRecognizer) {
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn) { [self] in
             vTopView.alpha = (vTopView.alpha == 1) ? 0 : 1
         } completion: { _ in }
     }
@@ -154,7 +167,7 @@ open class ImageViewerView: UIView {
         return pager
     }()
     
-    private let vTopView: TopViewMask = {
+    private lazy var vTopView: TopViewMask = {
         let view = TopViewMask()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

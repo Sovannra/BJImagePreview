@@ -29,13 +29,34 @@ class ViewController: UIViewController {
         setupView()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+
+        guard let flowLayout = vCollection.collectionViewLayout as? BaseCollectionViewFlowLayout else {
+            return
+        }
+        flowLayout.heightItems = 0
+        if UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) {
+            //here you can do the logic for the cell size if phone is in landscape
+            flowLayout.numberOfItemsInRow = 5
+        } else {
+            //logic if not landscape
+            flowLayout.numberOfItemsInRow = 3
+        }
+        flowLayout.invalidateLayout()
+    }
+    
     func setupView() {
         view.addSubview(vCollection)
-        vCollection.fillSuperview()
+        vCollection.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        vCollection.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        vCollection.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
+        vCollection.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 
     lazy var vCollection: BJCollectionView = {
         let view = BJCollectionView(numberOfItems: 3, spacingBetweenItems: 1.5)
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.showScrollIndicator = false
         view.alwaysBounceVertical = true
         view.register(cell: ImageCell.self)
