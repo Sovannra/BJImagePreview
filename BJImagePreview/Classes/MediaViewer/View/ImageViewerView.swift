@@ -11,6 +11,7 @@ import UIKit
 public protocol ImageViewerDelegate: AnyObject {
     func imageViewer(imageViewerView: ImageViewerView, getCurrentIndex index: Int)
     func imageViewer(imageViewerView: ImageViewerView, graggingView state: ImageViewerView.DraggingState)
+    func imageViewer(imageViewerView: ImageViewerView)
 }
 public extension ImageViewerView {
     
@@ -59,6 +60,11 @@ open class ImageViewerView: UIView {
         }
         // Update photo count
         vTopView.setupPhotoCount(count: currentIndex, total: photos.count)
+        
+        // Delegate imageViewerView
+        DispatchQueue.main.async {
+            self.imageViewerDelegate?.imageViewer(imageViewerView: self)
+        }
     }
     
     open override func layoutSubviews() {
@@ -170,6 +176,7 @@ open class ImageViewerView: UIView {
     private lazy var vTopView: TopViewMask = {
         let view = TopViewMask()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.delegate = self
         return view
     }()
 }
@@ -181,22 +188,9 @@ extension ImageViewerView: ImageViewerPagerVCDelegate {
         imageViewPager.currentViewController.photosPage.alpha = 1
         imageViewerDelegate?.imageViewer(imageViewerView: self, getCurrentIndex: currentIndex)
     }
-}
-
- class ImageViewerCell: UICollectionViewCell {
-    var zoomImageView = UIImageView()
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        zoomImageView.contentMode = .scaleAspectFill
-        zoomImageView.clipsToBounds = true
-        addSubview(zoomImageView)
-        zoomImageView.translatesAutoresizingMaskIntoConstraints = false
-        zoomImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        zoomImageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        zoomImageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        zoomImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-    }
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+     
+    func handleClose() {
+        updateUI(state: .began)
+        hide()
     }
 }

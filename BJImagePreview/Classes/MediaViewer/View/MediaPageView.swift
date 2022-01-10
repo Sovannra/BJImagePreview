@@ -56,16 +56,12 @@ class MediaPhotosPageView: UIScrollView, UIScrollViewDelegate {
         showsHorizontalScrollIndicator = false
         showsVerticalScrollIndicator = false
         
-        
-//        let singleTapGesture = UITapGestureRecognizer(target: self, action: nil)
-//        singleTapGesture.numberOfTapsRequired = 1
-//        addGestureRecognizer(singleTapGesture)
-        
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(doubleTapped(_:)))
         doubleTapGesture.numberOfTapsRequired = 2
         addGestureRecognizer(doubleTapGesture)
         
-//        singleTapGesture.require(toFail: doubleTapGesture)
+        let longTapGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressed(_:)))
+        addGestureRecognizer(longTapGesture)
     }
     func configureImageView() {
         guard let image = imageView.image else {
@@ -129,11 +125,12 @@ class MediaPhotosPageView: UIScrollView, UIScrollViewDelegate {
         zoom(to: rectToZoomTo, animated: true)
     }
     
-    @objc func singleTapped(){
-        if statusTapped {
-            statusTapped = false
-        }else{
-            statusTapped = true
+    @objc func longPressed(_ recognizer: UILongPressGestureRecognizer) {
+        if recognizer.state == .began {
+            guard let inputImage = imageView.image else { return }
+
+            let imageSaver = ImageSaver()
+            imageSaver.writeToPhotoAlbum(image: inputImage)
         }
     }
     

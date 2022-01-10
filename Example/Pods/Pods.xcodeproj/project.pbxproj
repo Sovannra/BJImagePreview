@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0385AC062C5987289707664B2A3ADDF7 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B261D76859B8AFB08511FFC204FCB973 /* UIImageView+Extension.swift */; };
 		03E83B251E4BE8D40C65AD846F6C20F6 /* Nuke-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C177BC5C2819448458E32495E38E6F2 /* Nuke-dummy.m */; };
+		04590C14278BDF75006048C2 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590C13278BDF75006048C2 /* ImageSaver.swift */; };
+		0471FD30278BEBEF005A174F /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471FD2F278BEBEF005A174F /* Toast.swift */; };
+		0471FD32278BF36F005A174F /* ImageViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471FD31278BF36F005A174F /* ImageViewerVC.swift */; };
 		0A2FF5C6465C14775AD5A4CC78055422 /* MediaPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABB92DCA4673143D803E523AB5E2C5C /* MediaPageView.swift */; };
 		0C8F40CD9D19EA31650AC7D24F4212A1 /* BJCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DB4C7871ACFC58A6003A3BBAA6A167 /* BJCollectionView.swift */; };
 		115E09F3A02E82F36D02CCABB84C2BDF /* UICollectionView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27983698F0E0128D26CE4384F98C1571 /* UICollectionView + Extension.swift */; };
@@ -94,6 +97,9 @@
 		02490732E66230E06ECB2A90075B4293 /* ZoomTransitionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ZoomTransitionController.swift; sourceTree = "<group>"; };
 		030B8DF7FEFA340AD781347D48270FF2 /* Pods-BJImagePreview_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BJImagePreview_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		044B8696340771E6E66F12C30FDEFB8C /* DragGestureHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DragGestureHandler.swift; path = BJImagePreview/Classes/MediaViewer/DragGestureHandler.swift; sourceTree = "<group>"; };
+		04590C13278BDF75006048C2 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageSaver.swift; path = BJImagePreview/Classes/MediaViewer/ImageSaver.swift; sourceTree = "<group>"; };
+		0471FD2F278BEBEF005A174F /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		0471FD31278BF36F005A174F /* ImageViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerVC.swift; sourceTree = "<group>"; };
 		0ABDCBA2852227502B193FAD4F8F78C0 /* BJCollection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BJCollection.release.xcconfig; sourceTree = "<group>"; };
 		107AFEEBC2A4EC54BC3869609E9B6454 /* Pods-BJImagePreview_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BJImagePreview_Tests"; path = Pods_BJImagePreview_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1399E2F26D62076BAC512B5AECD7EFD8 /* BJImagePreview */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BJImagePreview; path = BJImagePreview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +120,7 @@
 		3DA91CCCB9C835B80ADBBF00D73BFDEA /* Pods-BJImagePreview_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BJImagePreview_Example.modulemap"; sourceTree = "<group>"; };
 		3DC3DC458173610682506D5EC8614BE3 /* ImagePreheater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePreheater.swift; path = Sources/ImagePreheater.swift; sourceTree = "<group>"; };
 		3EE13725FC33D38EC3D442FCD330A8E3 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extension.swift"; path = "BJImagePreview/Classes/MediaViewer/UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		44D72459A22193D44E756C504639F402 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		44D72459A22193D44E756C504639F402 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		45DFFEEA26000CFBED62472B07C5DC3E /* ImageTaskMetrics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTaskMetrics.swift; path = Sources/ImageTaskMetrics.swift; sourceTree = "<group>"; };
 		46B164161F9E1ECD08B0900FFDE92701 /* Nuke-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nuke-umbrella.h"; sourceTree = "<group>"; };
 		46CD9242EDA1639D2E78CC973ABFBE17 /* Pods-BJImagePreview_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BJImagePreview_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -135,8 +141,8 @@
 		8C177BC5C2819448458E32495E38E6F2 /* Nuke-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nuke-dummy.m"; sourceTree = "<group>"; };
 		92F385E350FF8F48A6E0EDB4DABC7A3D /* Pods-BJImagePreview_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BJImagePreview_Example-Info.plist"; sourceTree = "<group>"; };
 		9A9A3C20D671F6B65AF0A1B6E62BA382 /* Pods-BJImagePreview_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BJImagePreview_Example-umbrella.h"; sourceTree = "<group>"; };
-		9BDB6A8A3168EC8C0A9D3D3F65C6E88D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9BDB6A8A3168EC8C0A9D3D3F65C6E88D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A35F1FE970CF6F7A3C7E969E37A0DC2D /* ImagePipeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePipeline.swift; path = Sources/ImagePipeline.swift; sourceTree = "<group>"; };
 		A709308E098DD085E0F98210DF6875EC /* DataCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataCache.swift; path = Sources/DataCache.swift; sourceTree = "<group>"; };
 		A71D5FBDA4B81F4DF62E0269E10E897B /* Pods-BJImagePreview_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BJImagePreview_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -166,7 +172,7 @@
 		F69141AB4AFCDD0EF682928464884028 /* Pods-BJImagePreview_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BJImagePreview_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		F7874B6E1A6F24B243F48FA5C53B8362 /* BJCollection */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BJCollection; path = BJCollection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABB92DCA4673143D803E523AB5E2C5C /* MediaPageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaPageView.swift; sourceTree = "<group>"; };
-		FF52D853F0FCF5331DBB66702C5CCC6F /* BJImagePreview.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BJImagePreview.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FF52D853F0FCF5331DBB66702C5CCC6F /* BJImagePreview.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = BJImagePreview.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				F243344B4EF4FF546ADDF7DF61E3393F /* ImageViewerPagerVC.swift */,
+				0471FD31278BF36F005A174F /* ImageViewerVC.swift */,
 			);
 			name = Controller;
 			path = BJImagePreview/Classes/MediaViewer/Controller;
@@ -288,7 +295,6 @@
 				33F73214728255F58924ADE68EFA80CD /* Internal.swift */,
 				219BF1678FA04FB3A14C8488E91F7572 /* Support Files */,
 			);
-			name = Nuke;
 			path = Nuke;
 			sourceTree = "<group>";
 		};
@@ -349,6 +355,7 @@
 				5B94B3D2DA922A6E1DBD6D90C28C449F /* Pod */,
 				62F926B72D39926F1FB347FA5C734BB4 /* Support Files */,
 				A1A7141326558FBC629397493A832ED6 /* View */,
+				04590C13278BDF75006048C2 /* ImageSaver.swift */,
 			);
 			name = BJImagePreview;
 			path = ../..;
@@ -386,6 +393,7 @@
 				D50B92FC49DBF561F55F84BB5FBA4A40 /* ZoomAnimator.swift */,
 				CA4CF630BA035378CC9A45792A5947F0 /* ZoomDismissalInteractionController.swift */,
 				02490732E66230E06ECB2A90075B4293 /* ZoomTransitionController.swift */,
+				0471FD2F278BEBEF005A174F /* Toast.swift */,
 			);
 			name = Animation;
 			path = BJImagePreview/Classes/MediaViewer/Animation;
@@ -446,7 +454,6 @@
 				27983698F0E0128D26CE4384F98C1571 /* UICollectionView + Extension.swift */,
 				AE46E2DCCA16BA5123EC682BB74DC756 /* Support Files */,
 			);
-			name = BJCollection;
 			path = BJCollection;
 			sourceTree = "<group>";
 		};
@@ -689,6 +696,7 @@
 			files = (
 				331249376D51D5C72DF2B823F8FDFC58 /* BJImagePreview-dummy.m in Sources */,
 				6183849D2F0B7230A8194135E3178C63 /* DragGestureHandler.swift in Sources */,
+				0471FD32278BF36F005A174F /* ImageViewerVC.swift in Sources */,
 				68B00FD978B7919263494CE70574AA18 /* ImageAppConstant.swift in Sources */,
 				678907CFB1B0C55EEBF1DB007E7FBD79 /* ImageViewerPagerVC.swift in Sources */,
 				54A707565605871340255B669540AF35 /* ImageViewerView.swift in Sources */,
@@ -697,8 +705,10 @@
 				0385AC062C5987289707664B2A3ADDF7 /* UIImageView+Extension.swift in Sources */,
 				FCB833316E32616148D271A8B6826BCD /* UIViewController+Extension.swift in Sources */,
 				3C71F4B233A007B8D48273F4AE17BBEA /* ZoomAnimator.swift in Sources */,
+				04590C14278BDF75006048C2 /* ImageSaver.swift in Sources */,
 				A29074DF4C782D5DD0107D296798C4C4 /* ZoomDismissalInteractionController.swift in Sources */,
 				D3978036C5BE2498F5ED31F9F6FE23ED /* ZoomTransitionController.swift in Sources */,
+				0471FD30278BEBEF005A174F /* Toast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,8 +1083,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

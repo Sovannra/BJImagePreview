@@ -11,21 +11,21 @@ import UIKit
 class DragGestureHandler: NSObject {
     //Whether to start dragging
     private var startDrag = false
-    //gestures response
+    //Gestures response
     private var noResponse = false
-    //原始位置
+    //Original location
     private var originFrame = CGRect.zero
-    //触摸点距离视图中心点距离
+    //The distance from the touch point to the center of the view
     private var distanceToCenter = CGSize.zero
     
     
-    //手势的对象视图
+    //View for gestures
     weak var gestureView: UIView?
-    //背景视图
+    //Background view
     weak var bgView: UIView?
-    //手势结束的回调
+    //Callback for end of gesture
     var completeBlock: ((_ finish: Bool)->())?
-    //有拖拽效果的拖拽回调
+    //Drag callback with drag effect
     var dragBlock: (()->())?
     var beganDragBlock: (()->())?
     
@@ -49,19 +49,18 @@ class DragGestureHandler: NSObject {
         let changePoint = gesture.translation(in: bgView)
         
         switch (gesture.state) {
-        case .began:// 识别器已经接收识别为此手势(状态)的触摸(Began)
-//            print("开始拖拽 begin dragging")
+        case .began:// The recognizer has received a touch recognized for this gesture (state) (Began)
             beganDragBlock?()
             self.startDrag = true
             self.noResponse = false
             self.originFrame = operateView.frame
-            //拖拽点距离中心点距离
+            //Drag point distance from the center point
             let insidePoint = gesture.location(in: operateView)
             let distanceX = insidePoint.x - operateView.frame.width * 0.5
             let distanceY = insidePoint.y - operateView.frame.height * 0.5
             self.distanceToCenter = CGSize.init(width: distanceX, height: distanceY)
-        case .changed:// 识别器已经接收到触摸，并且识别为手势改变(Changed)
-            //只有第一象限和第四象限靠近Y柱的生效
+        case .changed:// The recognizer has received a touch and recognized it as a gesture change (Changed)
+            
             if self.startDrag == true {
                 self.startDrag = false
                 if changePoint.y < 0 {
@@ -78,29 +77,28 @@ class DragGestureHandler: NSObject {
                 self.dragBlock!()
             }
             
-            //背景的一半高度作为参照
+            //Half the height of the background as a reference
             let halfHeight = bgView.frame.height * 0.5
             let halfWidth = bgView.frame.width * 0.5
             let surplus = changePoint.y > halfHeight ? halfHeight : changePoint.y
             let scale = surplus/halfHeight
             bgView.alpha = 0.1 + 0.9 * (1 - scale)
 
-            //transform的scale
+            //transform scale
             let frameScale = (1 - 0.5 * scale)
-            //移动之后的中心点（未做tranform变化）
+            //Center point after moving (without tranform change)
             let afterCenter = CGPoint.init(x: halfWidth + changePoint.x, y: halfHeight + changePoint.y)
-            //做tranform变化后的中心点偏移
+            //Center point offset after tranform change
             let afterCenterOffsetY = self.distanceToCenter.height * (1 - frameScale)
             let afterCenterOffsetX = self.distanceToCenter.width * (1 - frameScale)
-            //实际改变operateView的中心点和transform
+            //Change the center point and transform of operateView
             operateView.center = CGPoint.init(x: afterCenter.x + afterCenterOffsetX, y: afterCenter.y + afterCenterOffsetY)
             operateView.transform = CGAffineTransform.init(scaleX: frameScale, y: frameScale)
-        case .ended:// 识别器已经接收到触摸，并且识别为手势结束(Ended)
-//            print("结束拖拽 end dragging")
+        case .ended:// The recognizer has received the touch and recognized the gesture as Ended (Ended)
 
             self.startDrag = false
             self.noResponse = false
-            //如果放手的瞬时速度大于100或者偏移距离大于100，则走回调
+            //If the instantaneous speed of letting go is greater than 100 or the offset distance is greater than 100, go back
             if pointVelocity.y > 100 || changePoint.y > 80 {
                 if self.completeBlock != nil {
                     self.completeBlock!(true)

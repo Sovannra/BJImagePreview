@@ -10,6 +10,7 @@ import UIKit
 class TopViewMask: UIView {
     
     fileprivate var vtopViewConstraint: NSLayoutConstraint?
+    weak var delegate: ImageViewerPagerVCDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,6 +30,7 @@ class TopViewMask: UIView {
     
     private func setupComponent() {
         addSubview(vtopView)
+        vtopView.addSubview(vClose)
         vtopView.addSubview(vPotoCount)
     }
     
@@ -40,6 +42,16 @@ class TopViewMask: UIView {
         vtopView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         vtopView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         vtopView.heightAnchor.constraint(equalToConstant: UINavigationController.navBarHeight()).isActive = true
+        
+        //vClose
+        if #available(iOS 11.0, *) {
+            vClose.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 14).isActive = true
+        } else {
+            vClose.leftAnchor.constraint(equalTo: vtopView.leftAnchor, constant: 14).isActive = true
+        }
+        vClose.centerYAnchor.constraint(equalTo: vtopView.centerYAnchor).isActive = true
+        vClose.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        vClose.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
         //vPhotoCount
         vPotoCount.centerXAnchor.constraint(equalTo: vtopView.centerXAnchor).isActive = true
@@ -64,4 +76,17 @@ class TopViewMask: UIView {
         view.font = .systemFont(ofSize: 18, weight: .semibold)
         return view
     }()
+    
+    lazy var vClose: UIButton = {
+        let view = UIButton(type: .system)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.tintColor = .white
+        view.setImage(UIImage(named: "icon-back")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        view.addTarget(self, action: #selector(handleClose), for: .touchUpInside)
+        return view
+    }()
+    
+    @objc func handleClose() {
+        delegate?.handleClose()
+    }
 }

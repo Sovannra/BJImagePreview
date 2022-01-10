@@ -33,7 +33,6 @@ extension UIImageView {
     /** Load image from url */
     public func loadImage(with url: String, completion: ImageTask.Completion? = nil) {
         let options = ImageLoadingOptions(
-//            placeholder: UIImage(named: "placeholder"),
             transition: .fadeIn(duration: 0.33)
         )
         if let url = URL(string: url) {

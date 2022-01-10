@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		043426CB27857699004F7434 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043426CA27857699004F7434 /* ImageCell.swift */; };
+		0471FD34278C2472005A174F /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471FD33278C2472005A174F /* LocalData.swift */; };
+		0471FD36278C26DA005A174F /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471FD35278C26DA005A174F /* PhotoView.swift */; };
 		04A5C1BF2786A736002801E6 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5C1BE2786A736002801E6 /* UIImageView+Extension.swift */; };
-		04D62A142785861E00691359 /* photo15.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04D62A132785861D00691359 /* photo15.gif */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -32,8 +33,9 @@
 
 /* Begin PBXFileReference section */
 		043426CA27857699004F7434 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		0471FD33278C2472005A174F /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
+		0471FD35278C26DA005A174F /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		04A5C1BE2786A736002801E6 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImageView+Extension.swift"; path = "BJImagePreview/UIImageView+Extension.swift"; sourceTree = SOURCE_ROOT; };
-		04D62A132785861D00691359 /* photo15.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = photo15.gif; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* BJImagePreview_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BJImagePreview_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,7 +101,6 @@
 		607FACD21AFB9204008FA782 /* Example for BJImagePreview */ = {
 			isa = PBXGroup;
 			children = (
-				04D62A132785861D00691359 /* photo15.gif */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -108,6 +109,8 @@
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				043426CA27857699004F7434 /* ImageCell.swift */,
 				04A5C1BE2786A736002801E6 /* UIImageView+Extension.swift */,
+				0471FD33278C2472005A174F /* LocalData.swift */,
+				0471FD35278C26DA005A174F /* PhotoView.swift */,
 			);
 			name = "Example for BJImagePreview";
 			path = BJImagePreview;
@@ -259,7 +262,6 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				04D62A142785861E00691359 /* photo15.gif in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +350,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				0471FD34278C2472005A174F /* LocalData.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				0471FD36278C26DA005A174F /* PhotoView.swift in Sources */,
 				04A5C1BF2786A736002801E6 /* UIImageView+Extension.swift in Sources */,
 				043426CB27857699004F7434 /* ImageCell.swift in Sources */,
 			);
