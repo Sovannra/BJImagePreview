@@ -5,10 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/BJImagePreview.svg?style=flat)](https://cocoapods.org/pods/BJImagePreview)
 [![Platform](https://img.shields.io/cocoapods/p/BJImagePreview.svg?style=flat)](https://cocoapods.org/pods/BJImagePreview)
 
-<img width="25%" height="25%" src="https://user-images.githubusercontent.com/49421174/148745165-d9b1e05b-2c28-4b69-8d36-0fe83696c683.jpg" /><img width="25%" height="25%" src="https://user-images.githubusercontent.com/49421174/148745173-9f8ff69a-65d6-40b8-8abf-e7befb5c3d7e.jpg" />
+<img width="50%" height="50%" src="https://user-images.githubusercontent.com/49421174/148745165-d9b1e05b-2c28-4b69-8d36-0fe83696c683.jpg" /><img width="50%" height="50%" src="https://user-images.githubusercontent.com/49421174/148745173-9f8ff69a-65d6-40b8-8abf-e7befb5c3d7e.jpg" />
   <div style="display: flex;">
-    <img width="25%" height="25%" src="https://user-images.githubusercontent.com/49421174/148745186-b35814bb-b813-405b-87f6-930eee20c038.jpg" style="vertical-align: top;" />
-    <img width="25%" height="25%" src="https://user-images.githubusercontent.com/49421174/148745179-40c2af25-5e30-4987-bead-6d1b74fa7a81.jpg" />
+    <img width="50%" height="50%" src="https://user-images.githubusercontent.com/49421174/148745186-b35814bb-b813-405b-87f6-930eee20c038.jpg" style="vertical-align: top;" />
+    <img width="50%" height="50%" src="https://user-images.githubusercontent.com/49421174/148745179-40c2af25-5e30-4987-bead-6d1b74fa7a81.jpg" />
   </div>
 ---
 
