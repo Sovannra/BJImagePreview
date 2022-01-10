@@ -12,6 +12,7 @@
 		04590C14278BDF75006048C2 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04590C13278BDF75006048C2 /* ImageSaver.swift */; };
 		0471FD30278BEBEF005A174F /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471FD2F278BEBEF005A174F /* Toast.swift */; };
 		0471FD32278BF36F005A174F /* ImageViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471FD31278BF36F005A174F /* ImageViewerVC.swift */; };
+		0471FD38278C3131005A174F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0471FD37278C3131005A174F /* Assets.xcassets */; };
 		0A2FF5C6465C14775AD5A4CC78055422 /* MediaPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABB92DCA4673143D803E523AB5E2C5C /* MediaPageView.swift */; };
 		0C8F40CD9D19EA31650AC7D24F4212A1 /* BJCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DB4C7871ACFC58A6003A3BBAA6A167 /* BJCollectionView.swift */; };
 		115E09F3A02E82F36D02CCABB84C2BDF /* UICollectionView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27983698F0E0128D26CE4384F98C1571 /* UICollectionView + Extension.swift */; };
@@ -100,6 +101,7 @@
 		04590C13278BDF75006048C2 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageSaver.swift; path = BJImagePreview/Classes/MediaViewer/ImageSaver.swift; sourceTree = "<group>"; };
 		0471FD2F278BEBEF005A174F /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		0471FD31278BF36F005A174F /* ImageViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerVC.swift; sourceTree = "<group>"; };
+		0471FD37278C3131005A174F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BJImagePreview/Assets/Assets.xcassets; sourceTree = "<group>"; };
 		0ABDCBA2852227502B193FAD4F8F78C0 /* BJCollection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BJCollection.release.xcconfig; sourceTree = "<group>"; };
 		107AFEEBC2A4EC54BC3869609E9B6454 /* Pods-BJImagePreview_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BJImagePreview_Tests"; path = Pods_BJImagePreview_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1399E2F26D62076BAC512B5AECD7EFD8 /* BJImagePreview */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BJImagePreview; path = BJImagePreview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -356,6 +358,7 @@
 				62F926B72D39926F1FB347FA5C734BB4 /* Support Files */,
 				A1A7141326558FBC629397493A832ED6 /* View */,
 				04590C13278BDF75006048C2 /* ImageSaver.swift */,
+				0471FD37278C3131005A174F /* Assets.xcassets */,
 			);
 			name = BJImagePreview;
 			path = ../..;
@@ -648,6 +651,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0471FD38278C3131005A174F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

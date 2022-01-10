@@ -31,6 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
   s.swift_version = "4.2"
   s.source_files = 'BJImagePreview/Classes/**/*'
+  s.resource = 'BJTextView/Assets/**/*.xcassets'
   
   # s.resource_bundles = {
   #   'BJImagePreview' => ['BJImagePreview/Assets/*.png']

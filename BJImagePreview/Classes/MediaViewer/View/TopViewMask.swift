@@ -81,7 +81,7 @@ class TopViewMask: UIView {
         let view = UIButton(type: .system)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.tintColor = .white
-        view.setImage(UIImage(named: "icon-back")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        view.setImage(ImageAppConstant.loadImageResourcePath("icon-back")?.withRenderingMode(.alwaysTemplate), for: .normal)
         view.addTarget(self, action: #selector(handleClose), for: .touchUpInside)
         return view
     }()
